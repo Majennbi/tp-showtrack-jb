@@ -1,0 +1,423 @@
+html {
+  font-family: Lato,'helvetica neue',helvetica,arial;
+  font-size: 16px;
+}
+
+h1 {
+  font-family: Merriweather;
+  font-weight: 400;
+  font-size: 2.3rem;
+  color: #000;
+  margin-top: 10px;
+}
+
+h1, h2, h3, h4{
+  text-align: center;
+}
+
+h2, h3, h4 {
+  font-weight: 400;
+} 
+
+h3 {
+  text-transform: uppercase;
+}
+
+h4 {
+  width: 70%; 
+  text-align: center; 
+  border-bottom: 1px solid #000; 
+  line-height: 0.1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h4 span { 
+   background:#fff; 
+   padding:0 10px; 
+}
+
+p {
+  line-height: 150%;
+}
+
+hr.solid {
+  border: 0.5px solid black;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  width: 100%;
+}
+
+hr.softdivider {
+  border: 0.5px solid rgba(0, 0, 0, 0.151);
+}
+
+.container {
+  display : grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat (9, 1fr);
+  grid-gap: 10px;
+  grid-template-areas: 
+  "header"
+  "article"
+  "comments"
+  "aboutme"
+  "newsletter"
+  "popularpost"
+  "followme"
+  "advertisement"
+  "footer";
+  
+}
+
+/*------HEADER---------*/
+
+.header {
+
+  display: grid;
+  grid-area: header;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "logo logo logo"
+  "burger . menu";
+  padding: 35px;
+  
+}
+
+.logo {
+  grid-area: logo;
+  align-self: center;
+  justify-self: center;
+  height: 100%;
+  width: 100%;
+}
+
+.burger {
+  grid-area: burger;
+}
+
+.menu {
+  grid-area: menu;
+}
+
+.article, .comments, .aboutme, .newsletter, .popularpost, .followme, .advertisement {
+  margin: 30px;
+  padding: 4%;
+  border: solid 1px black;
+}
+
+/*------ARTICLE---------*/
+
+.article {
+  grid-area: article;
+  /*background-color: lightgoldenrodyellow;*/
+  margin: 30px;
+}
+
+.mainimage, .secondaryimage{
+  width: 100%;
+  height: 100%;
+  align-content: center;
+}
+
+.articlepics {
+  display : grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 8px;
+}
+
+.articlepics > img {
+  height: 100%;
+  width: 100%;
+}
+
+.caption {
+  font-style: italic;
+}
+
+.author {
+  background-color:#eee;
+  padding: 15px;
+}
+
+.authorname {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.author > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100%;
+    height: 30%;
+    width: 30%;
+  
+}
+.categories {
+  margin-top: 30px;
+}
+
+.categorieslist {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+.categorieslist > li {
+  display: inline;
+  border: 1px solid black;
+  padding: 6px;
+  margin-right: 2px;
+}
+
+
+/*------COMMENTS---------*/
+
+.comments {
+  grid-area: comments;
+}
+
+.commentaryauthor {
+  font-weight: bold;
+  line-height: 0.5;
+}
+
+.commentarydetails {
+  line-height: 0.5;
+}
+
+.commentarypresentation {
+  display: flex;
+}
+
+.commentarypresentation > img {
+  
+  margin-right: 2%;
+}
+
+
+
+
+form {
+  width: 100%;
+}
+
+form > h4, form > p {
+  text-align: center;
+}
+
+form label {
+  text-align: left;
+  margin-bottom: 10px;
+  
+}
+
+fieldset {
+  border: 1px solid lightgray;
+  background-color: rgba(225, 233, 255, 0.25);
+}
+
+form div {
+  width: 48%;
+  display: inline-block;
+}
+
+.nameform {
+  margin-right: 3%;
+}
+
+form input, form textarea {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+form input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  margin: 0;
+  vertical-align: bottom;
+  position: relative;
+  top: -1px;
+}
+
+.formcheckbox {
+  width: 100%;
+  text-align: center;
+}
+
+.formbutton {
+  margin-top: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: black;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 15px 20px 15px 20px;
+}
+ 
+
+/*------ABOUTME---------*/
+
+.aboutme {
+  grid-area: aboutme;
+  margin-top: 40px;
+}
+
+.incrustedtitle {
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  margin-top: -40px;
+}
+
+.aboutme > p {
+  margin-bottom: 30px;
+}
+
+.aboutmepic {
+  width: 100%
+}
+
+.aboutmesignature {
+  height: 30%;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  
+}
+
+/*------NEWSLETETR---------*/
+
+.newsletter {
+grid-area: newsletter;
+
+}
+
+.newsletter > input {
+  width: 83%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.newsletter > button {
+  padding: 15px;
+  background-color: black;
+  color: white;
+  border: solid 2px black;
+}
+
+/*------POPULAR POST---------*/
+
+.popularpost {
+grid-area: popularpost;
+
+
+}
+
+.popularpost > li {
+  display: inline;
+}
+
+.popularpostslist {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.popularpostslist > li > img {
+  width: 50px;
+  height: 50px;
+  margin-right: 2%;
+}
+
+.popularpostslist > li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
+/*------FOLLOW ME---------*/
+
+.followme {
+  grid-area: followme;
+  
+}
+
+.socialmedialinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.socialmedialinks > a {
+display: flex;
+width: 75px;
+height: 75px;
+border-radius: 10px;
+justify-content: center;
+align-items: center;
+font-size: 35px; 
+margin-right: 10px; 
+}
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+/* Instagram */
+.fa-instagram {
+  background: #FF496D;
+  color: white;
+}
+
+/* YouTube */
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+/*------ADVERTISEMENT---------*/
+
+.advertisement {
+grid-area: advertisement;
+display: grid;
+}
+
+.advertisementpic {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.footer {
+  grid-area: footer; 
+  background-color: black;
+  color: white;
+}
+
+/*--------------------------------------------------------------*/
+/*--------------------------------------------------------------*/
+
+  
+ 
+  
+
+
+
