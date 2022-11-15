@@ -1,14 +1,33 @@
 html {
   font-family: Lato,'helvetica neue',helvetica,arial;
-  font-size: 16px;
+  font-size: 16px;  
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
 }
 
 h1 {
   font-family: Merriweather;
   font-weight: 400;
-  font-size: 2.3rem;
+  font-size: 20px;
   color: #000;
   margin-top: 10px;
+}
+
+@media screen and (min-width: 700px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  h4 span {
+    font-size: 17px;
+  }
+
+  .énoncé {
+    font-size: 30px;
+  }
 }
 
 h1, h2, h3, h4{
@@ -17,6 +36,7 @@ h1, h2, h3, h4{
 
 h2, h3, h4 {
   font-weight: 400;
+  font-size: 15px;
 } 
 
 h3 {
@@ -26,16 +46,24 @@ h3 {
 h4 {
   width: 70%; 
   text-align: center; 
-  border-bottom: 1px solid #000; 
-  line-height: 0.1em;
+  border-bottom: 1px solid #000;
+  line-height: 0.1em; 
   margin-left: auto;
   margin-right: auto;
+
 }
 
 h4 span { 
    background:#fff; 
    padding:0 10px; 
 }
+
+@media screen and (max-width: 564px) {
+  h4 {
+  border: none;
+  line-height: 1em;
+    }
+  }
 
 p {
   line-height: 150%;
@@ -50,6 +78,10 @@ hr.solid {
 
 hr.softdivider {
   border: 0.5px solid rgba(0, 0, 0, 0.151);
+}
+
+hr.footerdivider {
+  border: 0.5px solid white;
 }
 
 .container {
@@ -303,9 +335,8 @@ grid-area: newsletter;
 }
 
 .newsletter > input {
-  width: 83%;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  width: 80%;
+  padding: 15px 0px 15px 15px;
 }
 
 .newsletter > button {
@@ -313,6 +344,20 @@ grid-area: newsletter;
   background-color: black;
   color: white;
   border: solid 2px black;
+}
+
+.newsletterFooter > input {
+  width: 80%;
+  padding: 15px 0px 15px 15px;
+  font-size: 16px
+}
+
+.newsletterFooter > button {
+  padding: 15px;
+  background-color: black;
+  color: white;
+  border: solid 1px white;
+  font-size: 16px;
 }
 
 /*------POPULAR POST---------*/
@@ -345,6 +390,24 @@ grid-area: popularpost;
 
 }
 
+.popularpostslistFooter {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.popularpostslistFooter > li > img {
+  width: 50px;
+  height: 50px;
+  margin-right: 2%;
+}
+
+.popularpostslistFooter > li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
 /*------FOLLOW ME---------*/
 
 .followme {
@@ -367,6 +430,25 @@ justify-content: center;
 align-items: center;
 font-size: 35px; 
 margin-right: 10px; 
+text-decoration: none;
+}
+
+.socialmediafooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
+.socialmediafooter > a {
+display: flex;
+width: 35px;
+height: 35px;
+border-radius: 100%;
+justify-content: center;
+align-items: center;
+font-size: 20px; 
+margin-right: 10px;
+text-decoration: none;
 }
 
 /* Facebook */
@@ -410,14 +492,110 @@ display: grid;
   grid-area: footer; 
   background-color: black;
   color: white;
+  padding: 35px;
+}
+
+.footer h3 {
+  text-align: left;
+  font-size: 18px;
+  letter-spacing: 2px;
+  
+}
+
+h3:after {
+  display: block;
+    height: 2px;
+    width: 40px;
+    content: ' ';
+    background: rgba(255,255,255,.24);
+    margin-top: 7px;
+    box-sizing: inherit;
+}
+
+.footer div > p {
+  text-align: left;
+  font-size: 14px;
+  color:  rgba(255,255,255,.24);
+}
+
+.footer div {
+  padding-bottom: 50px;
+}
+
+.credentials {
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.8;
 }
 
 /*--------------------------------------------------------------*/
 /*--------------------------------------------------------------*/
 
-  
+fieldset legend {
+  text-align: center;
+  padding: 10px 20px 10px 20px;
+  background-color: white;
+  font-size: 17px;
+  font-weight: 400;
+  color: #2b2b2b;
+  text-transform: uppercase;
+}
+
+fieldset {
+  background-color: white;
+  padding: 10px 30px 20px 30px;
+  text-align: center;
+  line-height: 1.5;
+  border: 1px solid black;
+}
+
+.allarguments {
+  margin: 30px;
+}
  
+@media screen and (min-width: 900px) {
+  .allarguments {
+    display: flex;
+  }
+
+  fieldset {
+    margin: 10px;
+  }
+
+  .responsiveFooter {
+    display: flex;
+    
+  }
+
+  .responsiveFooter div {
+    width: 100%;
+    padding-right: 50px;
+    
+  }
+  .popularpostslistFooter > li > img {
+    width: 50px;
+    height: 50px;
+    margin-right: 5%;
+  }
+
+  .popularpostslistFooter > li {
+    font-size: 16px;
+  }
+
+  .newsletterFooter > input {
+    width: 45%;
+    padding: 15px 0px 15px 15px;
+    font-size: 16px
+  }
   
+  .newsletterFooter > button {
+    padding: 16px;
+    background-color: black;
+    color: white;
+    border: solid 1px white;
+    font-size: 16px;
+  }
+}
 
 
 
