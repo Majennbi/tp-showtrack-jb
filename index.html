@@ -7,6 +7,7 @@
     <meta name="description" content="Article NY">
     <link href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <title>Article NY</title>
 </head>
 <body class="container">
@@ -14,27 +15,34 @@
     <header class="header">
         <img src="https://superbdemo.com/themes/minimalistblogger/wp-content/uploads/2022/08/logo.png"
         alt="minimalist blog" class="logo">
-        <nav class="burger">
-            <ul>
-                <li>Blog</li>
-                <li>Travel</li>
-                <li>Lifestyle</li>
-                <li>Writing</li>
-                <li>About</li>
-                <li>Contact</li>
-            </ul>
+        
+        <div class="menu">         
+        <nav id="main-menu">
+        <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Travel</a></li>
+            <li><a href="#">Lifestyle</a></li>
+            <li><a href="#">Writing</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
         </nav>
 
-        <nav class="menu">
+        <input type="checkbox" id="hamburger-input" class="burger-shower" />
+        <label id="hamburger-menu" for="hamburger-input">
+        <nav id="sidebar-menu" class="burger">
+            <h3>Menu</h3>
             <ul>
-                <li>Blog</li>
-                <li>Travel</li>
-                <li>Lifestyle</li>
-                <li>Writing</li>
-                <li>About</li>
-                <li>Contact</li>
-            </ul>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Travel</a></li>
+                <li><a href="#">Lifestyle</a></li>
+                <li><a href="#">Writing</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+         </ul>
         </nav>
+        </label>
+        </div>
     </header>
 
     <main>
@@ -111,8 +119,9 @@
                 <div>
                     <div class="commentarypresentation">
                     <img src="https://secure.gravatar.com/avatar/20cc063422307ae6867c071dc6d61613?s=64&d=mm&r=g">
-                    <p class="commentaryauthor"> John William says : </p>
-                    <p class="commentarydetails">August 23, 2022 at 1:49 pm</p>
+                    <p class="commentaryauthor"> John William says : 
+                    <br><span class="commentarydetails"> August 23, 2022 at 1:49 pm</span>
+                    </p>
                     </div>
                     <p>Etiam placerat velit vitae dui blandit sollicitudin. Vestibulum tincidunt sed dolor 
                     sit amet volutpat. Nullam egestas sem at mollis sodales. Nunc eget lacinia eros, 
@@ -124,13 +133,16 @@
                 <div>
                     <div class="commentarypresentation">
                     <img src="https://secure.gravatar.com/avatar/d2a5b44ae5ccab53de108addb5a71127?s=64&d=mm&r=g">
-                    <p class="commentaryauthor">Tina Johnson says : </p>
-                    <p class="commentarydetails">August 23, 2022 at 1:51 pm</p>
+                    <p class="commentaryauthor">Tina Johnson says : 
+                    <br><span class="commentarydetails"> August 23, 2022 at 1:51 pm</span>
+                    </p>
                     </div>
                     <p>Cras id vehicula est, tincidunt pellentesque magna. Etiam porttitor nulla urna, 
                     quis vulputate justo euismod ac. Nunc viverra sollicitudin fringilla.</p>
                 </div>
 
+                <hr class="solid">
+                
                 <form class="form-horizontal" method="post" action="contact.php">
                     <p>Leave a reply</p>
                     <p>Your email address will not be published. Required fields are marked*</p>
